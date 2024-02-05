@@ -18,6 +18,7 @@ const UserDashboard = () => {
             <li><a href="#dogs">My Dogs</a></li>
             <li><a href="#appointments">Appointments</a></li>
             <li><a href="#community">Medications</a></li>
+            <li><a href="#account">Account</a></li>
           </ul>
         </nav>
 

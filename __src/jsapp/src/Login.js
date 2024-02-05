@@ -19,6 +19,11 @@ const LoginScreen = () => {
     }     
   };
 
+  const handleRegisterClick = () => {
+    // Navigate to the CreateAccountScreen
+    navigate('/create-account');
+  };
+
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <div style={{ backgroundColor: '#fff', padding: '20px', borderRadius: '8px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)', width: '300px', textAlign: 'center' }}>
@@ -42,6 +47,7 @@ const LoginScreen = () => {
           <br />
           <button type="submit">Login</button>
         </form>
+        <button onClick={handleRegisterClick}>Account Register</button>
       </div>
     </div>
   );
