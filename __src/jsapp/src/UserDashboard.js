@@ -1,5 +1,7 @@
 import React from 'react';
-import {useLocation} from 'react-router-dom';
+import {useLocation, Link} from 'react-router-dom';
+
+
 const UserDashboard = () => {
     const location = useLocation();
     const username = location.state.username;
@@ -12,11 +14,11 @@ const UserDashboard = () => {
         <nav style={{ width: '20%', padding: '10px', backgroundColor: '#f4f4f4', borderRadius: '8px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
           <h3>Menu</h3>
           <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#dogs">My Dogs</a></li>
-            <li><a href="#appointments">Appointments</a></li>
-            <li><a href="#community">Medications</a></li>
-            <li><a href="#account">Account</a></li>
+          <li><Link to="/profile">Profile</Link></li> {/* Change here to use Link */}
+          <li><Link to="/dogs">My Dogs</Link></li>
+          <li><Link to="/appointments">Appointments</Link></li>
+          <li><Link to="/community">Medications</Link></li>
+          <li><Link to="/account">Account</Link></li>
           </ul>
         </nav>
         <section style={{ flex: 1, padding: '20px' }}>
