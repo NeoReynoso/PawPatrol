@@ -1,6 +1,7 @@
 //import React from 'react';
 import { useLocation } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -53,7 +54,7 @@ const UserDashboard = () => {
     });
     // You can send the updated user data to the server here
   };
-
+ 
   return (
     <div>
       <header style={{ backgroundColor: '#333', color: '#fff', padding: '10px', textAlign: 'center' }}>
@@ -67,7 +68,7 @@ const UserDashboard = () => {
             <li><a href="#profile">Profile</a></li>
             <li><a href="#dogs">My Dogs</a></li>
             <li><a href="#appointments">Appointments</a></li>
-            <li><a href="#community">Medications</a></li>
+            <li><Link to="/medications">Medications</Link></li>
             <li><a href="#account">Account</a></li>
           </ul>
         </nav>
