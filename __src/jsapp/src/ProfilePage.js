@@ -57,7 +57,7 @@ const ProfilePage = () => {
             <div id="profile">
               <h3>My Profile</h3>
               <form onSubmit={handleSubmit}>
-                <label>Name:</label>
+                <label>Name: </label>
                 <input
                   type="text"
                   name="name"
@@ -65,7 +65,7 @@ const ProfilePage = () => {
                   onChange={handleInputChange}
                 />
                 <br />
-                <label>Email:</label>
+                <label>Email: </label>
                 <input
                   type="email"
                   name="email"
@@ -73,7 +73,7 @@ const ProfilePage = () => {
                   onChange={handleInputChange}
                 />
                 <br />
-                <label>Age:</label>
+                <label>Age: </label>
                 <input
                   type="number"
                   name="age"
@@ -97,3 +97,7 @@ export default ProfilePage;
 
 
 
+
+
+
+                  
