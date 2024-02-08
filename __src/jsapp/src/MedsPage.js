@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './appCss.css'; // Importing CSS stylesheet
+import { Link } from 'react-router-dom';
+import './App.css'; // Import CSS stylesheet
 
 const MedsPage = () => {
   const [medications, setMedications] = useState([
@@ -55,23 +56,23 @@ const MedsPage = () => {
         <h1>PawPatrol Medications</h1>
       </header>
 
-      <div className="content">
+      <div className="container">
         <nav className="menu">
           <h3>Menu</h3>
-          <ul>
-            <li><a href="#profile">Profile</a></li>
+          <ul className="menu-list">
+            <li><Link to="/profile">Profile</Link></li>
             <li><a href="#dogs">My Dogs</a></li>
-            <li><a href="#appointments">Appointments</a></li>
-            <li><a href="#medications">Medications</a></li>
+            <li><Link to="/appointments">Appointments</Link></li>
+            <li><Link to="/medications">Medications</Link></li>
             <li><a href="#account">Account</a></li>
           </ul>
         </nav>
 
         <section className="main-section">
-          <h2>Welcome!</h2>
-          <div id="medications">
+          <h2>Your Pets Medication Schedule</h2>
+          <div className="medications">
             <h3>Medications</h3>
-            <table className="meds-table">
+            <table className="table">
               <thead>
                 <tr>
                   <th>Med Name</th>
@@ -91,8 +92,8 @@ const MedsPage = () => {
                     <td>{med.doseFrequency}</td>
                     <td>{med.duration}</td>
                     <td>
-                      <button onClick={() => handleEdit(med.id)}>Edit</button>
-                      <button onClick={() => handleDelete(med.id)}>Delete</button>
+                      <button className="button" onClick={() => handleEdit(med.id)}>Edit</button>
+                      <button className="button" onClick={() => handleDelete(med.id)}>Delete</button>
                     </td>
                   </tr>
                 ))}
@@ -101,21 +102,21 @@ const MedsPage = () => {
             <form onSubmit={handleSubmit}>
               <input type="hidden" name="id" value={formData.id} />
               <label>Med Name:</label>
-              <input type="text" name="medName" value={formData.medName} onChange={handleChange} />
+              <input className="text-field" type="text" name="medName" value={formData.medName} onChange={handleChange} />
               <br />
               <label>Med Type:</label>
-              <input type="text" name="medType" value={formData.medType} onChange={handleChange} />
+              <input className="text-field" type="text" name="medType" value={formData.medType} onChange={handleChange} />
               <br />
               <label>Dose Amount:</label>
-              <input type="text" name="doseAmount" value={formData.doseAmount} onChange={handleChange} />
+              <input className="text-field" type="text" name="doseAmount" value={formData.doseAmount} onChange={handleChange} />
               <br />
               <label>Dose Frequency:</label>
-              <input type="text" name="doseFrequency" value={formData.doseFrequency} onChange={handleChange} />
+              <input className="text-field" type="text" name="doseFrequency" value={formData.doseFrequency} onChange={handleChange} />
               <br />
               <label>Duration:</label>
-              <input type="text" name="duration" value={formData.duration} onChange={handleChange} />
+              <input className="text-field" type="text" name="duration" value={formData.duration} onChange={handleChange} />
               <br />
-              <button type="submit">Add Medication</button>
+              <button className="button" type="submit">Add Medication</button>
             </form>
           </div>
         </section>
@@ -125,3 +126,4 @@ const MedsPage = () => {
 };
 
 export default MedsPage;
+

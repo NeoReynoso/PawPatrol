@@ -1,0 +1,182 @@
+/* Dark Theme found online*/
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Neon Purple Text Color */
+h1, h2 {
+    color: #e90cb2; /* Neon purple */
+}
+
+/* Neon Borders */
+.neon-border {
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #00ff00,
+                0 0 10px #00ff00,
+                0 0 15px #00ff00,
+                0 0 20px #00ff00;
+    transition: box-shadow 0.5s ease;
+}
+
+/* Buttons */
+.button {
+    background-color: #333;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e90cb2;
+}
+
+/* Text Edit Fields */
+.text-field {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.text-field:focus {
+    outline: none;
+    border: 2px solid #00ff00;
+}
+
+
+/* Tables */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #00ff00; /* Adding border to the table */
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    border-bottom: 1px solid #0a0a0a;
+    background-color: #6d2199; /* Changing table cell background color to light purple */
+    color: #050505; /* Text color for table cells */
+}
+
+.table th {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: left;
+}
+
+.table tr:nth-child(even) {
+    background-color: #000000;
+}
+
+.table tr:nth-child(odd) {
+    background-color: #444;
+}
+
+.table tr:hover {
+    background-color: #7e45f7; /* Change to a different color upon hover */
+}
+
+/* Menu */
+/* Styles for header */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Styles for menu */
+  .menu {
+    background-color: #28282cf3;
+    padding: 10px;
+    width: 20%;
+  }
+  
+  .menu h3 {
+    color: #f7f7f7;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin-bottom: 5px;
+  }
+  
+  .menu a {
+    color: #be0b89;
+    text-decoration: none;
+  }
+  
+  .menu a:hover {
+    text-decoration: underline;
+  }
+  
+  /* menu-list */
+  .menu-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-list li {
+    margin-bottom: 5px;
+    font-size: 22px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the text bold */
+}
+
+.menu-list a {
+    color: #be0b89;
+    text-decoration: none;
+}
+
+.menu-list a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+  /* Styles for main content section */
+  .container {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  .main-section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  #profile,
+  #dogs,
+  #appointments,
+  #medications {
+    width: calc(50% - 20px); /* Adjust width as needed */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

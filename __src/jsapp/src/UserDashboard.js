@@ -1,15 +1,11 @@
-//import React from 'react';
-import { useLocation } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
-
+import './App.css'; // Import CSS file
 
 const UserDashboard = () => {
-  const location = useLocation();
-  const username = location.state.username;
+  const username = 'John'; // Mock username (replace with actual username)
 
- // Mock user data (replace with actual user data)
+  // Mock user data (replace with actual user data)
   const [userData, setUserData] = useState({
     name: "John Doe",
     email: "john@example.com",
@@ -30,8 +26,6 @@ const UserDashboard = () => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
-
-  
 
   // Update formValues when userData changes
   useEffect(() => {
@@ -57,30 +51,29 @@ const UserDashboard = () => {
  
   return (
     <div>
-      <header style={{ backgroundColor: '#333', color: '#fff', padding: '10px', textAlign: 'center' }}>
+      <header className="header">
         <h1>PawPatrol Dashboard</h1>
       </header>
 
-      <div style={{ display: 'flex', marginTop: '20px' }}>
-        <nav style={{ width: '20%', padding: '10px', backgroundColor: '#f4f4f4', borderRadius: '8px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+      <div className="container">
+        <nav className="menu">  
           <h3>Menu</h3>
-          <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li><a href="#profile">Profile</a></li>
+          <ul className="menu-list">
+            <li><Link to="/profile">Profile</Link></li>
             <li><a href="#dogs">My Dogs</a></li>
-            <li><a href="#appointments">Appointments</a></li>
+            <li><Link to="/appointments">Appointments</Link></li>
             <li><Link to="/medications">Medications</Link></li>
             <li><a href="#account">Account</a></li>
           </ul>
         </nav>
 
-        <section style={{ flex: 1, padding: '20px' }}>
+        <section className="main-section">
           <h2>Welcome, {username}!</h2>
-          <div>
+          <div className="content">
             <div id="profile">
               <h3>My Profile</h3>
               <form onSubmit={handleSubmit}>
                 <label>Name:</label>
-
                 {formValues.name !== userData.name ? (
                   <input
                     type="text"
@@ -115,30 +108,6 @@ const UserDashboard = () => {
                 ) : (
                   <p>{userData.age}</p>
                 )}
-                <label>Name:</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formValues.name}
-                  onChange={handleInputChange}
-                />
-                <br />
-                <label>Email:</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formValues.email}
-                  onChange={handleInputChange}
-                />
-                <br />
-                <label>Age:</label>
-                <input
-                  type="number"
-                  name="age"
-                  value={formValues.age}
-                  onChange={handleInputChange}
-                />
-                <br />
                 <button type="submit">Save</button>
               </form>
             </div>
@@ -146,12 +115,10 @@ const UserDashboard = () => {
               <h3>My Dogs</h3>
               <p>Manage your dogs' profiles and information.</p>
             </div>
-
             <div id="appointments">
               <h3>Appointments</h3>
               <p>Schedule and view upcoming appointments for your dogs.</p>
             </div>
-
             <div id="medications">
               <h3>Medications</h3>
               <p>Manage your dogs' Medications.</p>
