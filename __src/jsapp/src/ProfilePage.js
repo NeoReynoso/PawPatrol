@@ -39,18 +39,21 @@ const ProfilePage = () => {
 
   return (
     <div>
-      <header style={{ backgroundColor: '#333', color: '#fff', padding: '10px', textAlign: 'center' }}>
+      <header className='header' >
         <h1>User Profile</h1>
       </header>
-      <div style={{ display: 'flex', marginTop: '20px' }}>
-        <nav style={{ width: '20%', padding: '10px', backgroundColor: '#f4f4f4', borderRadius: '8px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+      <div className='container'>
+        <nav className='menu'>
           <h3>Menu</h3>
-          <ul style={{ listStyle: 'none', padding: 0 }}>
-            {/* You can add more menu items here if needed */}
-            <li><Link to="/dashboard">Dashboard</Link></li>
+          <ul className='menu-list'>
+          <li><Link to="/profile">Profile</Link></li>
+              <li><a href="#dogs">My Dogs</a></li>
+              <li><Link to="/appointments">Appointments</Link></li>
+              <li><Link to="/medications">Medications</Link></li>
+              <li><a href="#account">Account</a></li>
           </ul>
         </nav>
-        <section style={{ flex: 1, padding: '20px' }}>
+        <section className='main-section'>
           <h2>Welcome to Your Profile, {user.name}!</h2>
           <h2>Your Email Is, {user.email}.</h2>
           <div>
