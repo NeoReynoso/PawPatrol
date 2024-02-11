@@ -4,6 +4,8 @@ import LoginScreen from './Login.js';
 import UserDashboard from './UserDashboard.js';
 import CreateAccountScreen from './CreateAccountScreen';
 import ProfilePage from './ProfilePage';
+import MedicationScreen from './MedsPage.js';
+import AppointmentsScreen from './AppointmentsScreen.js';
 
 const App = () => {
   return (   
@@ -15,6 +17,8 @@ const App = () => {
         <Route path="/profile" element={<ProfilePage/>} />
 
 
+        <Route path="/medications" element={<MedicationScreen />} />
+        <Route path="/appointments" element={<AppointmentsScreen />} />
       </Routes>
     </Router>
   )

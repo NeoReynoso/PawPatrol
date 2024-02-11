@@ -1,33 +1,71 @@
-import React from 'react';
-import {useLocation, Link} from 'react-router-dom';
-
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './App.css'; // Import CSS file
 
 const UserDashboard = () => {
     const location = useLocation();
     const username = location.state.username;
   return (
     <div>
-      <header style={{ backgroundColor: '#333', color: '#fff', padding: '10px', textAlign: 'center' }}>
+      <header className="header">
         <h1>PawPatrol Dashboard</h1>
       </header>
-      <div style={{ display: 'flex', marginTop: '20px' }}>
-        <nav style={{ width: '20%', padding: '10px', backgroundColor: '#f4f4f4', borderRadius: '8px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+
+      <div className="container">
+        <nav className="menu">  
           <h3>Menu</h3>
-          <ul style={{ listStyle: 'none', padding: 0 }}>
-          <li><Link to="/profile">Profile</Link></li> {/* Change here to use Link */}
-          <li><Link to="/dogs">My Dogs</Link></li>
-          <li><Link to="/appointments">Appointments</Link></li>
-          <li><Link to="/community">Medications</Link></li>
-          <li><Link to="/account">Account</Link></li>
+          <ul className="menu-list">
+            <li><Link to="/profile">Profile</Link></li>
+            <li><a href="#dogs">My Dogs</a></li>
+            <li><Link to="/appointments">Appointments</Link></li>
+            <li><Link to="/medications">Medications</Link></li>
+            <li><a href="#account">Account</a></li>
           </ul>
         </nav>
-        <section style={{ flex: 1, padding: '20px' }}>
+
+        <section className="main-section">
           <h2>Welcome, {username}!</h2>
-          <div>
-            {/* Content for each menu option goes here */}
+          <div className="content">
             <div id="profile">
               <h3>My Profile</h3>
-              <p>View and edit your profile information.</p>
+              <form onSubmit={handleSubmit}>
+                <label>Name:</label>
+                {formValues.name !== userData.name ? (
+                  <input
+                    type="text"
+                    name="name"
+                    value={formValues.name}
+                    onChange={handleInputChange}
+                  />
+                ) : (
+                  <p>{userData.name}</p>
+                )}
+                <br />
+                <label>Email:</label>
+                {formValues.email !== userData.email ? (
+                  <input
+                    type="email"
+                    name="email"
+                    value={formValues.email}
+                    onChange={handleInputChange}
+                  />
+                ) : (
+                  <p>{userData.email}</p>
+                )}
+                <br />
+                <label>Age:</label>
+                {formValues.age !== userData.age ? (
+                  <input
+                    type="number"
+                    name="age"
+                    value={formValues.age}
+                    onChange={handleInputChange}
+                  />
+                ) : (
+                  <p>{userData.age}</p>
+                )}
+                <button type="submit">Save</button>
+              </form>
             </div>
             <div id="dogs">
               <h3>My Dogs</h3>
