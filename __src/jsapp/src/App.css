@@ -1,182 +1,107 @@
-/* Dark Theme found online*/
-body {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-}
 
-/* Neon Purple Text Color */
-h1, h2 {
-    color: #e90cb2; /* Neon purple */
-}
+Global styles */
+ body {
+  
+ font-family: Arial, sans-serif; 
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+} 
 
-/* Neon Borders */
-.neon-border {
-    border: 2px solid #00ff00;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #00ff00,
-                0 0 10px #00ff00,
-                0 0 15px #00ff00,
-                0 0 20px #00ff00;
-    transition: box-shadow 0.5s ease;
-}
-
-/* Buttons */
-.button {
-    background-color: #333;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #e90cb2;
-}
-
-/* Text Edit Fields */
-.text-field {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    padding: 20px;
-}
-
-.text-field:focus {
-    outline: none;
-    border: 2px solid #00ff00;
-}
-
-
-/* Tables */
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 2px solid #00ff00; /* Adding border to the table */
-}
-
-.table th,
-.table td {
-    padding: 10px;
-    border-bottom: 1px solid #0a0a0a;
-    background-color: #6d2199; /* Changing table cell background color to light purple */
-    color: #050505; /* Text color for table cells */
-}
-
-.table th {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    text-align: left;
-}
-
-.table tr:nth-child(even) {
-    background-color: #000000;
-}
-
-.table tr:nth-child(odd) {
-    background-color: #444;
-}
-
-.table tr:hover {
-    background-color: #7e45f7; /* Change to a different color upon hover */
-}
-
-/* Menu */
-/* Styles for header */
+/* Header styles */
 .header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  /* Styles for menu */
-  .menu {
-    background-color: #28282cf3;
-    padding: 10px;
-    width: 20%;
-  }
-  
-  .menu h3 {
-    color: #f7f7f7;
-  }
-  
-  .menu ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .menu li {
-    margin-bottom: 5px;
-  }
-  
-  .menu a {
-    color: #be0b89;
-    text-decoration: none;
-  }
-  
-  .menu a:hover {
-    text-decoration: underline;
-  }
-  
-  /* menu-list */
-  .menu-list {
-    list-style-type: none;
-    padding: 0;
+  background-color: #ff8200;
+  color: #fff;
+   box-shadow: 0 0 3px 5px rgba(0,0,0,.2); 
+  padding: 20px;
+  text-align: center;
 }
 
-.menu-list li {
-    margin-bottom: 5px;
-    font-size: 22px; /* Adjust the font size as needed */
-    font-weight: bold; /* Make the text bold */
+.h1{
+  background-color: #ff8200;
+  color: #fff;
+   box-shadow: 0 0 3px 5px rgba(0,0,0,.2); 
+  padding: 20px;
+  text-align: center;
 }
 
-.menu-list a {
-    color: #be0b89;
-    text-decoration: none;
+/* Container styles */
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.menu-list a:hover {
-    text-decoration: underline;
+/* Menu styles */
+.menu {
+  width: 200px;
+  background-color: #444;
+  box-shadow: 0 0 3px 5px rgba(0,0,0,.2);
+  padding: 20px;
+  color: #fff;
 }
 
+.menu h3 {
+  margin-bottom: 15px;
+}
 
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
 
+.menu ul li {
+  margin-bottom: 10px;
+}
 
-  /* Styles for main content section */
-  .container {
-    display: flex;
-    margin-top: 20px;
-    justify-content: center;
-  }
-  
-  .main-section {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .content {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  #profile,
-  #dogs,
-  #appointments,
-  #medications {
-    width: calc(50% - 20px); /* Adjust width as needed */
-  }
-  
-  @media screen and (max-width: 768px) {
-    .content {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main section styles */
+.main-section {
+  flex-grow: 1;
+  background-color: #fff;
+  box-shadow: 0 0 3px 5px rgba(0,0,0,.2);
+  padding: 20px;
+}
+
+.main-section h2 {
+  margin-bottom: 20px;
+}
+
+/* Profile form styles */
+#profile form {
+  margin-bottom: 20px;
+}
+
+#profile label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#profile input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+#profile button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#profile button:hover {
+  background-color: #555;
+}
