@@ -20,7 +20,7 @@ const CreateAccountScreen = () => {
 
   return (
     <div>
-      <header style={{ backgroundColor: '#333', color: '#fff', padding: '10px', textAlign: 'center' }}>
+      <header style={{ backgroundColor: '#333',color: '#fff', padding: '10px', textAlign: 'center' }}>
         <h1>PawPatrol Account Registration</h1>
       </header>
 
@@ -29,7 +29,7 @@ const CreateAccountScreen = () => {
           <h2>Create Account</h2>
           <input
             type="text"
-            placeholder="Username"
+            placeholder="Email"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
