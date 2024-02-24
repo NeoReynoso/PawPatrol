@@ -1,182 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 /* Dark Theme found online*/
 body {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
+  
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
 }
 
 /* Neon Purple Text Color */
 h1, h2 {
-    color: #e90cb2; /* Neon purple */
+  color: #e90cb2; /* Neon purple */
+  justify-content: center; 
+  align-items: center;
 }
 
 /* Neon Borders */
 .neon-border {
-    border: 2px solid #00ff00;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #00ff00,
-                0 0 10px #00ff00,
-                0 0 15px #00ff00,
-                0 0 20px #00ff00;
-    transition: box-shadow 0.5s ease;
+  border: 2px solid #00ff00;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #00ff00,
+
+              0 0 10px #00ff00,
+              0 0 15px #00ff00,
+              0 0 20px #00ff00;
+  transition: box-shadow 0.5s ease;
 }
 
 /* Buttons */
 .button {
-    background-color: #333;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #333;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background-color: #e90cb2;
+  background-color: #e90cb2;
 }
 
 /* Text Edit Fields */
 .text-field {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    padding: 20px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
 }
 
 .text-field:focus {
-    outline: none;
-    border: 2px solid #00ff00;
+  outline: none;
+  border: 2px solid #00ff00;
 }
-
 
 /* Tables */
 .table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 2px solid #00ff00; /* Adding border to the table */
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #00ff00; /* Adding border to the table */
 }
 
 .table th,
 .table td {
-    padding: 10px;
-    border-bottom: 1px solid #0a0a0a;
-    background-color: #6d2199; /* Changing table cell background color to light purple */
-    color: #050505; /* Text color for table cells */
+  padding: 10px;
+  border-bottom: 1px solid #0a0a0a;
+  background-color: #6d2199; /* Changing table cell background color to light purple */
+  color: #050505; /* Text color for table cells */
 }
 
 .table th {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    text-align: left;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: left;
 }
 
 .table tr:nth-child(even) {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 .table tr:nth-child(odd) {
-    background-color: #444;
+  background-color: #444;
 }
 
 .table tr:hover {
-    background-color: #7e45f7; /* Change to a different color upon hover */
+  background-color: #7e45f7; /* Change to a different color upon hover */
 }
 
 /* Menu */
 /* Styles for header */
 .header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  /* Styles for menu */
-  .menu {
-    background-color: #28282cf3;
-    padding: 10px;
-    width: 20%;
-  }
-  
-  .menu h3 {
-    color: #f7f7f7;
-  }
-  
-  .menu ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .menu li {
-    margin-bottom: 5px;
-  }
-  
-  .menu a {
-    color: #be0b89;
-    text-decoration: none;
-  }
-  
-  .menu a:hover {
-    text-decoration: underline;
-  }
-  
-  /* menu-list */
-  .menu-list {
-    list-style-type: none;
-    padding: 0;
+
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a {
+  color: #fff; /* Link color */
+  text-decoration: none;
+  margin: 0 10px; /* Add margin between links */
+}
+
+.header a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Styles for menu */
+.menu {
+  background-color: #28282cf3;
+  padding: 10px;
+  width: 20%;
+}
+
+.menu h3 {
+  color: #f7f7f7;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  margin-bottom: 5px;
+}
+
+.menu a {
+  color: #be0b89;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* menu-list */
+.menu-list {
+  list-style-type: none;
+  padding: 0;
 }
 
 .menu-list li {
-    margin-bottom: 5px;
-    font-size: 22px; /* Adjust the font size as needed */
-    font-weight: bold; /* Make the text bold */
+  margin-bottom: 5px;
+  font-size: 22px; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the text bold */
 }
 
 .menu-list a {
-    color: #be0b89;
-    text-decoration: none;
+  color: #be0b89;
+  text-decoration: none;
 }
 
 .menu-list a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+/* Styles for main content section ******************************** */
+.main-section {
+  background-size: cover; 
+  flex: 1;
+  padding: 20px;
+  display: flex;
+
+}
+
+.container {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
 }
 
 
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
+#profile,
+#dogs,
+#appointments,
+#medications {
+  width: calc(50% - 20px); 
+}
 
-  /* Styles for main content section */
-  .container {
-    display: flex;
-    margin-top: 20px;
-    justify-content: center;
-  }
-  
-  .main-section {
-    flex: 1;
-    padding: 20px;
-  }
-  
+@media screen and (max-width: 768px) {
   .content {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  #profile,
-  #dogs,
-  #appointments,
-  #medications {
-    width: calc(50% - 20px); /* Adjust width as needed */
-  }
-  
-  @media screen and (max-width: 768px) {
-    .content {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
+}
+/* med card configs ******************************** */
+
+header-meds {
+
+
+}
+
+.med-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px;
+  gap: 20px;
+}
+
+.med-card {
+  background-color: #070707;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.med-card-content {
+  margin-bottom: 10px;
+  color: #e107c0;
+}
+
+.med-card-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.addform {
+  background-color: #28282cf3;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  transition: transform 1s ease, opacity 0.3s ease;
+  position: relative;
+  opacity: 1; /* Ensure the initial opacity is set to 1 */
+}
+
+
+.addform label {
+  margin-bottom: 10px;
+}
+
+.addform .text-field {
+  margin-bottom: 10px;
+}
+
+.addform.hide {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none; /* Hide the form from mouse interaction */
+}
+
+.addform.show {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto; /* Re-enable mouse interaction */
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  background-image: url('../resources/smiling-and-happy-dog-open-mouth-show-tongue-vector-25516735.png');
+  margin-left: 10px;
+  background-size: cover; /* Adjust the background size as needed */
+  width: 100px; /* Specify width */
+  height: 100px; /* Specify height */
+  flex-grow: 0; 
+  flex-shrink: 0; 
+  flex-basis: auto; 
+}
+
+.login-btn {
+  margin-right: 20px;
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block; 
+}
+
+/* Image configs ******************************** */
+.img-txt-title {
+  color: #095b69; 
+  font-size: 35px;
+  font-weight: bold;
+  font-family: fantasy;
+  justify-content: center; 
+  align-items: center;
+
+}
+
+.img-txt-content {
+  color: #030102; 
+  font-size: 25px;
+  justify-content: center; 
+  align-items: center;
+  font-size: 25px;
+
+}
+
+.photo-caption {
+  background-color: #f5f4f4d7;
+  color: #050303;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  width: 400px;
+  height: 600px;
+  justify-content: center; 
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 500;
+
+}
+
+.service-comment {
+  background-color: #f5f4f4d7;
+  color: #050303;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  width: 500px;
+  height: 200px;
+  justify-content: right; 
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 500;
+
+}
+
+.walking-img {
+  background-image: url('../resources/istockphoto-1386939001-612x612.jpg');
+  background-size: cover; /* Stretch the background image to cover the entire body */
+  flex-grow: 1; 
+  height: 1080px;
+  display: flex;
+
+}
+
+.vet-img {
+  background-image: url('../resources/NVA_-_MASTER_-_60-40_-_CLINIC_-_Veterinarians_with_a_Golden_Retriever.webp');
+  background-size: cover;
+  flex-grow: 1; 
+  height: 1080px;
+  display: flex;
+}
+
+.groomer-img {
+  background-image: url('../resources/GettyImages-1277453154.jpg');
+  background-size: cover;
+  flex-grow: 1; 
+  display: flex;
+  height: 1080px;
+}

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const mongoService = require('./mongoService');
+const mongoService = require('../services/mongoService');
 
 // Route for inserting new user data
 router.post('/insertUser', async (req, res) => {
