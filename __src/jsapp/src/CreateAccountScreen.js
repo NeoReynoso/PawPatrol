@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import logo from './logo.png'; // Import logo image
 
 const CreateAccountScreen = () => {
   const [username, setUsername] = useState('');
@@ -19,13 +20,25 @@ const CreateAccountScreen = () => {
   };
 
   return (
-    <div>
-      <header style={{ backgroundColor: '#333', color: '#fff', padding: '10px', textAlign: 'center' }}>
-        <h1>PawPatrol Account Registration</h1>
-      </header>
-
-      <div style={{ display: 'flex', marginTop: '20px', justifyContent: 'center' }}>
-        <form style={{ backgroundColor: '#fff', padding: '20px', borderRadius: '8px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)', width: '300px', textAlign: 'center' }}>
+    <div className="account-page">
+      <div className="header">
+        <div className="logo-container">
+          <img src={logo} alt="Logo" className="logo" />
+          <h1 className="logo-text">Paw Patrol</h1> {/* Add logo text */}
+        </div>
+        <nav>
+          <ul>
+          <li><a href="/home">Home</a></li>
+            <li><a href="/profile">Profile</a></li> {/* Link to profile page*/}
+            <li><a href="dogs">My Dogs</a></li>
+            <li><a href="/appointments">Appointments</a></li>
+            <li><a href="/medications">Medications</a></li>
+            <li><a href="/create-account">Account</a></li>
+            <li className="login-button"><a href="#">Login</a></li> {/* Add login button */}
+          </ul>
+        </nav>
+      </div>
+      <section className="main-section">
           <h2>Create Account</h2>
           <input
             type="text"
@@ -44,10 +57,9 @@ const CreateAccountScreen = () => {
           />
           <br />
           <button type="submit" onClick={handleCreateAccount}>Create Account</button>
-        </form>
-      </div>
-    </div>
-  );
+               </section>
+        </div>
+   );
 };
 
 export default CreateAccountScreen;

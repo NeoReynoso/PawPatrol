@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from './logo.png'; // Import your logo image
+import './ProfilePage.css'; // Import your CSS file
 
 const ProfilePage = () => {
   // Sample user data
@@ -7,7 +9,11 @@ const ProfilePage = () => {
     name: 'John Doe',
     email: 'john@example.com',
     age: 30,
-    // Add more user information as needed
+    address: '',
+    state: '',
+    city: '',
+    zip: '',
+    phone: '',
   });
 
   // State for form fields
@@ -15,7 +21,11 @@ const ProfilePage = () => {
     name: user.name,
     email: user.email,
     age: user.age,
-    // Add more form fields as needed
+    address: user.address,
+    state: user.state,
+    city: user.city,
+    zip: user.zip,
+    phone: user.phone,
   });
 
   // Handle form field changes
@@ -33,33 +43,42 @@ const ProfilePage = () => {
       name: formValues.name,
       email: formValues.email,
       age: formValues.age,
+      address: formValues.address,
+      state: formValues.state,
+      city: formValues.city,
+      zip: formValues.zip,
+      phone: formValues.phone,
     });
     // You can send the updated user data to the server here
   };
 
   return (
-    <div>
-      <header className='header' >
-        <h1>User Profile</h1>
-      </header>
-      <div className='container'>
-        <nav className='menu'>
-          <h3>Menu</h3>
-          <ul className='menu-list'>
-          <li><Link to="/profile">Profile</Link></li>
-              <li><a href="#dogs">My Dogs</a></li>
-              <li><Link to="/appointments">Appointments</Link></li>
-              <li><Link to="/medications">Medications</Link></li>
-              <li><a href="#account">Account</a></li>
+    <div className="home-page">
+      <div className="header">
+        <div className="logo-container">
+          <img src={logo} alt="Logo" className="logo" />
+          <h1 className="logo-text">Paw Patrol</h1> {/* Add logo text */}
+        </div>
+        <nav>
+          <ul>
+          <li><a href="/home">Home</a></li>
+            <li><Link to="/profile">Profile</Link></li> {/* Link to profile page*/}
+            <li><a href="/dogs">My Dogs</a></li>
+            <li><a href="/appointments">Appointments</a></li>
+            <li><a href="/medications">Medications</a></li>
+            <li><a href="/create-account">Account</a></li>
+            <li className="login-button"><a href="#">Login</a></li> {/* Add login button */}
           </ul>
         </nav>
+      </div>
+      <div className='container'>
         <section className='main-section'>
-          <h2>Welcome to Your Profile, {user.name}!</h2>
-          <h2>Your Email Is, {user.email}.</h2>
-          <div>
+          <h2 className="center">Welcome to Your Profile, {user.name}!</h2>
+          <h2 className="center">Your Email Is, {user.email}.</h2>
+          <div className="center">
             <div id="profile">
-              <h3>My Profile</h3>
-              <form onSubmit={handleSubmit}>
+              <h3 className="center">My Profile</h3>
+              <form onSubmit={handleSubmit} className="center">
                 <label>Name:</label>
                 <input
                   type="text"
@@ -84,7 +103,46 @@ const ProfilePage = () => {
                   onChange={handleInputChange}
                 />
                 <br />
-                {/* Add more form fields as needed */}
+                <label>Address:</label>
+                <input
+                  type="text"
+                  name="address"
+                  value={formValues.address}
+                  onChange={handleInputChange}
+                />
+                <br />
+                <label>State:</label>
+                <input
+                  type="text"
+                  name="state"
+                  value={formValues.state}
+                  onChange={handleInputChange}
+                />
+                <br />
+                <label>City:</label>
+                <input
+                  type="text"
+                  name="city"
+                  value={formValues.city}
+                  onChange={handleInputChange}
+                />
+                <br />
+                <label>ZIP:</label>
+                <input
+                  type="text"
+                  name="zip"
+                  value={formValues.zip}
+                  onChange={handleInputChange}
+                />
+                <br />
+                <label>Phone:</label>
+                <input
+                  type="text"
+                  name="phone"
+                  value={formValues.phone}
+                  onChange={handleInputChange}
+                />
+                <br />
                 <button type="submit">Save</button>
               </form>
             </div>
@@ -97,10 +155,3 @@ const ProfilePage = () => {
 };
 
 export default ProfilePage;
-
-
-
-
-
-
-                  

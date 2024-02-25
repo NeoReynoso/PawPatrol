@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './App.css'; // Import CSS stylesheet
+import logo from './logo.png'; // Import logo image
 
 const MedsPage = () => {
   const [medications, setMedications] = useState([
@@ -51,27 +52,27 @@ const MedsPage = () => {
   };
 
   return (
-    <div>
-      <header className="header">
-        <h1>PawPatrol Medications</h1>
-      </header>
-
-      <div className="container">
-        <nav className="menu">
-          <h3>Menu</h3>
-          <ul className="menu-list">
-            <li><Link to="/profile">Profile</Link></li>
-            <li><a href="#dogs">My Dogs</a></li>
-            <li><Link to="/appointments">Appointments</Link></li>
-            <li><Link to="/medications">Medications</Link></li>
-            <li><a href="#account">Account</a></li>
+    <div className="meds-page">
+      <div className="header">
+        <div className="logo-container">
+          <img src={logo} alt="Logo" className="logo" />
+          <h1 className="logo-text">Paw Patrol</h1> {/* Add logo text */}
+        </div>
+        <nav>
+          <ul>
+          <li><a href="/home">Home</a></li>
+            <li><Link to="/profile">Profile</Link></li> {/* Link to profile page*/}
+            <li><a href="/dogs">My Dogs</a></li>
+            <li><a href="/appointments">Appointments</a></li>
+            <li><a href="/medications">Medications</a></li>
+            <li><a href="/create-account">Account</a></li>
+            <li className="login-button"><a href="#">Login</a></li> {/* Add login button */}
           </ul>
         </nav>
-
+      </div>
         <section className="main-section">
           <h2>Your Pets Medication Schedule</h2>
           <div className="medications">
-            <h3>Medications</h3>
             <table className="table">
               <thead>
                 <tr>
@@ -121,8 +122,7 @@ const MedsPage = () => {
           </div>
         </section>
       </div>
-    </div>
-  );
+     );
 };
 
 export default MedsPage;

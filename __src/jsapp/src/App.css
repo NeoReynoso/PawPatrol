@@ -7,7 +7,8 @@ body {
 
 /* Neon Purple Text Color */
 h1, h2 {
-    color: #e90cb2; /* Neon purple */
+    color: #ffffff; /* Meds schedule text */
+    text-align: center;
 }
 
 /* Neon Borders */
@@ -38,11 +39,11 @@ h1, h2 {
 
 /* Text Edit Fields */
 .text-field {
-    background-color: #1a1a1a;
+    background-color: #e3e0e0;
     color: #ffffff;
     border: none;
     border-radius: 5px;
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 .text-field:focus {
@@ -63,7 +64,7 @@ h1, h2 {
     padding: 10px;
     border-bottom: 1px solid #0a0a0a;
     background-color: #6d2199; /* Changing table cell background color to light purple */
-    color: #050505; /* Text color for table cells */
+    color: #ffffff; /* Text color for table cells */
 }
 
 .table th {
@@ -73,7 +74,7 @@ h1, h2 {
 }
 
 .table tr:nth-child(even) {
-    background-color: #000000;
+    background-color: #ffffff;
 }
 
 .table tr:nth-child(odd) {
@@ -95,7 +96,7 @@ h1, h2 {
   
   /* Styles for menu */
   .menu {
-    background-color: #28282cf3;
+    background-color: #f7f7f7;
     padding: 10px;
     width: 20%;
   }

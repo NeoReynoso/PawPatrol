@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css'; // Importing CSS stylesheet
 import { Link } from 'react-router-dom';
+import logo from './logo.png'; // Import logo image
 
 const AppointmentsPage = () => {
   const [appointments, setAppointments] = useState([
@@ -50,23 +51,24 @@ const AppointmentsPage = () => {
   };
 
   return (
-    <div>
-      <header className="header">
-        <h1>My Appointments</h1>
-      </header>
-
-      <div style={{ display: 'flex', marginTop: '20px', justifyContent: 'center' }}>
-        <nav className="menu">
-          <h3>Menu</h3>
-          <ul className="menu-list">
-            <li><Link to="/profile">Profile</Link></li>
-            <li><a href="#dogs">My Dogs</a></li>
-            <li><Link to="/appointments">Appointments</Link></li>
-            <li><Link to="/medications">Medications</Link></li>
-            <li><a href="#account">Account</a></li>
+    <div className="appointment-page">
+      <div className="header">
+        <div className="logo-container">
+          <img src={logo} alt="Logo" className="logo" />
+          <h1 className="logo-text">Paw Patrol</h1> {/* Add logo text */}
+        </div>
+        <nav>
+          <ul>
+          <li><a href="/home">Home</a></li>
+            <li><Link to="/profile">Profile</Link></li> {/* Link to profile page*/}
+            <li><a href="dogs">My Dogs</a></li>
+            <li><a href="/appointments">Appointments</a></li>
+            <li><a href="/medications">Medications</a></li>
+            <li><a href="/create-account">Account</a></li>
+            <li className="login-button"><a href="#">Login</a></li> {/* Add login button */}
           </ul>
         </nav>
-
+      </div>
         <section className="main-section">
           <h2>Your Appointments</h2>
           <div id="appointments">
@@ -125,7 +127,7 @@ const AppointmentsPage = () => {
           </div>
         </section>
       </div>
-    </div>
+    
   );
 };
 
