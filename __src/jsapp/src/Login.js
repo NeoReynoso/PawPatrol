@@ -1,36 +1,72 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link component from react-router-dom
-import './HomePage.css'; // Import CSS file for styling
-import './App.css'; // Import CSS stylesheet
-import logo from './logo.png'; // Import logo image
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './App.css'; // Import your CSS file
+import logo from './logo.png'; // Import your logo image
 
-function HomePage() {
+const LoginScreen = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    console.log('Logging in with:', { email, password });
+    if (email && password) {
+      navigate('/dashboard', {
+        state: { email: email }
+      });
+    }     
+  };
+
+  const handleRegisterClick = () => {
+    navigate('/create-account');
+  };
+
   return (
-    <div className="home-page">
+    <div className="profile-page">
       <div className="header">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" />
-          <h1 className="logo-text">Paw Patrol</h1> {/* Add logo text */}
+          <h1 className="logo-text">Paw Patrol</h1>
         </div>
         <nav>
           <ul>
-            <li><Link to="/profile">Profile</Link></li> {/* Link to profile page*/}
-            <li><a href="/dogs">My Dogs</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/services">Services</a></li>
             <li><a href="/appointments">Appointments</a></li>
             <li><a href="/medications">Medications</a></li>
             <li><a href="/create-account">Account</a></li>
-            <li className="login-button"><a href="#">Login</a></li> {/* Add login button */}
           </ul>
         </nav>
       </div>
-      <div className="background-image">
-        <div className="content">
-          <h2>Welcome to Our Website</h2>
-          <p>This is a brief introduction to our services.</p>
+      <div className="login-container"> {/* Added a container div */}
+        <div className="login-form">
+        <h2>Login to Paw Patrol</h2>
+         <form onSubmit={handleLogin}>
+            <input
+              type="text"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <br />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <br />
+            <button type="submit">Login</button>
+          </form>
+          <button onClick={handleRegisterClick}>Account Register</button>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default HomePage;
+export default LoginScreen;

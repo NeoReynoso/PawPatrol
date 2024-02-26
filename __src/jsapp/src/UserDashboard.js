@@ -29,8 +29,8 @@ const UserDashboard = () => {
         <div>
             <header className="header">
                 <h1>PawPatrol Dashboard</h1>
+                <div className="logo-container"></div>
             </header>
-
             <div className="container">
                 <nav className="menu">  
                     <h3>Menu</h3>

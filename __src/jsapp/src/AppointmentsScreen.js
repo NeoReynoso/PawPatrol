@@ -59,21 +59,20 @@ const AppointmentsPage = () => {
         </div>
         <nav>
           <ul>
-          <li><a href="/home">Home</a></li>
+          <li><a href="/">Home</a></li>
             <li><Link to="/profile">Profile</Link></li> {/* Link to profile page*/}
-            <li><a href="dogs">My Dogs</a></li>
+            <li><a href="/services">Services</a></li>
             <li><a href="/appointments">Appointments</a></li>
             <li><a href="/medications">Medications</a></li>
             <li><a href="/create-account">Account</a></li>
-            <li className="login-button"><a href="#">Login</a></li> {/* Add login button */}
+            <li className="login-button"><a href="/login">Login</a></li> {/* Add login button */}
           </ul>
         </nav>
       </div>
         <section className="main-section">
-          <h2>Your Appointments</h2>
+          <h3>Your Appointments</h3>
           <div id="appointments">
-            <h3>Appointments</h3>
-            <table className="table">
+          <table className="table">
               <thead>
                 <tr>
                   <th>Appointment Name</th>
@@ -101,27 +100,27 @@ const AppointmentsPage = () => {
                   </tr>
                 ))}
               </tbody>
-            </table>
+            </table><br></br>
             <form onSubmit={handleSubmit}>
               <input type="hidden" name="id" value={formData.id} />
               <label>Appointment Name:</label>
               <input className="text-field" type="text" name="apptName" value={formData.apptName} onChange={handleChange} />
-              <br />
+              <br /><br></br>
               <label>Appointment Type:</label>
               <input className="text-field" type="text" name="apptType" value={formData.apptType} onChange={handleChange} />
-              <br />
+              <br /><br></br>
               <label>Provider Type:</label>
               <input className="text-field" type="text" name="proType" value={formData.proType} onChange={handleChange} />
-              <br />
+              <br /><br></br>
               <label>Provider Name:</label>
               <input className="text-field" type="text" name="proName" value={formData.proName} onChange={handleChange} />
-              <br />
+              <br /><br></br>
               <label>Provider Address:</label>
               <input className="text-field" type="text" name="proAdd" value={formData.proAdd} onChange={handleChange} />
-              <br />
+              <br /><br></br>
               <label>Date and Time:</label>
               <input className="text-field" type="datetime-local" name="dateTime" value={formData.dateTime} onChange={handleChange} />
-              <br />
+              <br /><br></br>
               <button className="button" type="submit">Add Appointment</button>
             </form>
           </div>

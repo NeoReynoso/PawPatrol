@@ -60,18 +60,18 @@ const MedsPage = () => {
         </div>
         <nav>
           <ul>
-          <li><a href="/home">Home</a></li>
+          <li><a href="/">Home</a></li>
             <li><Link to="/profile">Profile</Link></li> {/* Link to profile page*/}
-            <li><a href="/dogs">My Dogs</a></li>
+            <li><a href="/services">Services</a></li>
             <li><a href="/appointments">Appointments</a></li>
             <li><a href="/medications">Medications</a></li>
             <li><a href="/create-account">Account</a></li>
-            <li className="login-button"><a href="#">Login</a></li> {/* Add login button */}
+            <li className="login-button"><a href="/login">Login</a></li> {/* Add login button */}
           </ul>
         </nav>
       </div>
         <section className="main-section">
-          <h2>Your Pets Medication Schedule</h2>
+          <h3>Your Pets Medication Schedule</h3>
           <div className="medications">
             <table className="table">
               <thead>
@@ -99,24 +99,24 @@ const MedsPage = () => {
                   </tr>
                 ))}
               </tbody>
-            </table>
+            </table><br></br>
             <form onSubmit={handleSubmit}>
               <input type="hidden" name="id" value={formData.id} />
               <label>Med Name:</label>
               <input className="text-field" type="text" name="medName" value={formData.medName} onChange={handleChange} />
-              <br />
+              <br /><br></br>
               <label>Med Type:</label>
               <input className="text-field" type="text" name="medType" value={formData.medType} onChange={handleChange} />
-              <br />
+              <br /><br></br>
               <label>Dose Amount:</label>
               <input className="text-field" type="text" name="doseAmount" value={formData.doseAmount} onChange={handleChange} />
-              <br />
+              <br /><br></br>
               <label>Dose Frequency:</label>
               <input className="text-field" type="text" name="doseFrequency" value={formData.doseFrequency} onChange={handleChange} />
-              <br />
+              <br /><br></br>
               <label>Duration:</label>
               <input className="text-field" type="text" name="duration" value={formData.duration} onChange={handleChange} />
-              <br />
+              <br /><br></br>
               <button className="button" type="submit">Add Medication</button>
             </form>
           </div>

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './logo.png'; // Import your logo image
-import './ProfilePage.css'; // Import your CSS file
+import './App.css'; // Import your CSS file
 
 const ProfilePage = () => {
   // Sample user data
   const [user, setUser] = useState({
-    name: 'John Doe',
-    email: 'john@example.com',
-    age: 30,
+    name: '',
+    email: '',
+    age: '',
     address: '',
     state: '',
     city: '',
@@ -53,7 +53,7 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="home-page">
+    <div className="profile-page">
       <div className="header">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" />
@@ -61,20 +61,20 @@ const ProfilePage = () => {
         </div>
         <nav>
           <ul>
-          <li><a href="/home">Home</a></li>
+          <li><a href="/">Home</a></li>
             <li><Link to="/profile">Profile</Link></li> {/* Link to profile page*/}
-            <li><a href="/dogs">My Dogs</a></li>
+            <li><a href="/services">Services</a></li>
             <li><a href="/appointments">Appointments</a></li>
             <li><a href="/medications">Medications</a></li>
             <li><a href="/create-account">Account</a></li>
-            <li className="login-button"><a href="#">Login</a></li> {/* Add login button */}
+            <li> <a href="/login-button">Login</a></li> {/* Add login button */}
           </ul>
         </nav>
       </div>
       <div className='container'>
         <section className='main-section'>
-          <h2 className="center">Welcome to Your Profile, {user.name}!</h2>
-          <h2 className="center">Your Email Is, {user.email}.</h2>
+          <h3 className="center">Welcome to Your Profile, {user.name}!</h3>
+          <h3 className="center">Your Email Is, {user.email}.</h3>
           <div className="center">
             <div id="profile">
               <h3 className="center">My Profile</h3>
