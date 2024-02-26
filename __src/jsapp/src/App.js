@@ -8,6 +8,7 @@ import CreateAccountScreen from './CreateAccountScreen';
 import ProfilePage from './ProfilePage';
 import MedicationScreen from './MedsPage.js';
 import AppointmentsScreen from './AppointmentsScreen.js';
+import LandingPage from './landingPage.js';
 
 const App = () => {
   return (   

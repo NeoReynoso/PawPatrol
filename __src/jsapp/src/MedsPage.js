@@ -14,13 +14,24 @@ const MedsPage = () => {
   ]);
 
   const [formData, setFormData] = useState({
-    id: '',
-    medName: '',
     medType: '',
     doseAmount: '',
     doseFrequency: '',
     duration: ''
   });
+
+  const handleEdit = (id) => {
+    const medToEdit = medications.find(med => med.id === id);
+    setFormData(medToEdit);
+  };
+
+  const handleDelete = (id) => {
+    const updatedMeds = medications.filter(med => med.id !== id);
+    setMedications(updatedMeds);
+  };
+
+
+  const [showAddForm, setShowAddForm] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,6 +42,7 @@ const MedsPage = () => {
     e.preventDefault();
     const newMedication = { ...formData, id: Date.now() };
     setMedications([...medications, newMedication]);
+    setShowAddForm(false); // Close the form after submission
     setFormData({
       id: '',
       medName: '',
@@ -39,16 +51,6 @@ const MedsPage = () => {
       doseFrequency: '',
       duration: ''
     });
-  };
-
-  const handleEdit = (id) => {
-    const medToEdit = medications.find(med => med.id === id);
-    setFormData(medToEdit);
-  };
-
-  const handleDelete = (id) => {
-    const updatedMeds = medications.filter(med => med.id !== id);
-    setMedications(updatedMeds);
   };
 
   return (
@@ -120,10 +122,10 @@ const MedsPage = () => {
               <button className="button" type="submit">Add Medication</button>
             </form>
           </div>
+          <button className="button" onClick={() => setShowAddForm(!showAddForm)}>Add Medication</button>
         </section>
       </div>
      );
 };
 
 export default MedsPage;
-

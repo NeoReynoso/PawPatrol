@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 /* Dark Theme found online*/
 body {
     background-color: #0f082e;
@@ -15,28 +16,29 @@ h1, h2 {
 
 /* Neon Borders */
 .neon-border {
-    border: 2px solid #00ff00;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #00ff00,
-                0 0 10px #00ff00,
-                0 0 15px #00ff00,
-                0 0 20px #00ff00;
-    transition: box-shadow 0.5s ease;
+  border: 2px solid #00ff00;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #00ff00,
+
+              0 0 10px #00ff00,
+              0 0 15px #00ff00,
+              0 0 20px #00ff00;
+  transition: box-shadow 0.5s ease;
 }
 
 /* Buttons */
 .button {
-    background-color: #333;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #333;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background-color: #e90cb2;
+  background-color: #e90cb2;
 }
 
 /* Appointment Text Edit Fields */
@@ -49,16 +51,15 @@ h1, h2 {
 }
 
 .text-field:focus {
-    outline: none;
-    border: 2px solid #00ff00;
+  outline: none;
+  border: 2px solid #00ff00;
 }
-
 
 /* Tables */
 .table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 2px solid #00ff00; /* Adding border to the table */
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #00ff00; /* Adding border to the table */
 }
 
 .table th,
@@ -80,11 +81,11 @@ h1, h2 {
 }
 
 .table tr:nth-child(odd) {
-    background-color: #444;
+  background-color: #444;
 }
 
 .table tr:hover {
-    background-color: #7e45f7; /* Change to a different color upon hover */
+  background-color: #7e45f7; /* Change to a different color upon hover */
 }
 
 /* Menu */
@@ -242,7 +243,7 @@ h1, h2 {
 }
 
 .menu-list a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
  /* Styles for main content section */
