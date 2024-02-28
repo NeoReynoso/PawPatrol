@@ -12,7 +12,7 @@ const LoginScreen = () => {
     e.preventDefault();
     console.log('Logging in with:', { email, password });
     if (email && password) {
-      navigate('/dashboard', {
+      navigate('/services', { /*route to page*/
         state: { email: email }
       });
     }     

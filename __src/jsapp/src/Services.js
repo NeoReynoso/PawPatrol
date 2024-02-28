@@ -40,7 +40,7 @@ function ServicesPage() {
           <div className="overlay">Boarding</div>
         </div>
         <div className="service">
-          <img src={image4} alt="veteriarian " />
+          <a href="/medications"><img src={image4} alt="veteriarian" /></a>
           <div className="overlay">Veterinarian</div>
         </div>
       </div>
