@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+// import React, { useState } from 'react';
+// import { useLocation, Link } from 'react-router-dom';
 import './App.css'; // Import CSS file
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
-    const location = useLocation();
+    // const location = useLocation();
 
 
     
